@@ -34,9 +34,15 @@ const saveData = async (nota) => {
    return  await docDynamo.put(params).promise();
   
 };
+const deleteById = async (id) => {
+  const params = id
+ 
+   return  await docDynamo.delete(params).promise();
+  
+};
 
 module.exports =  {
-  getData, saveData
+  getData, saveData, deleteById
 };
 
 //saveData(nota);

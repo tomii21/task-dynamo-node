@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { getData, saveData } = require("./dynamobd/dynamo");
+const { getData, saveData, deleteById } = require("./dynamobd/dynamo");
 
 const app = express();
 
@@ -41,6 +41,16 @@ app.post("/", async (req, res) => {
   try {
     await saveData(Item);
     res.redirect("/");
+  } catch (error) {
+    console.log(error);
+  }
+});
+app.delete("/notas:id", async (req, res) => {
+ const id = req.params.id
+  try {
+    await deleteById(id);
+    res.redirect("/notas");
+    alert("Nota borrada exitosamente")
   } catch (error) {
     console.log(error);
   }

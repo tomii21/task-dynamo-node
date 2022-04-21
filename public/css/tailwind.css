@@ -50,6 +50,12 @@
   font-size: 80%;
   background-color: #A8E7EE;
 }
+.btn-delete-task{
+  background-color: rgb(156, 42, 42);
+  border-radius: 4px;
+  padding: 3px 5px 3px 5px ;
+  color: #ffff;
+}
 html {
   line-height: 1.5;
   /* 1 */

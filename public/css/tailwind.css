@@ -31,7 +31,25 @@
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
 */
-
+.list-tasks{
+  width: 15%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+.title{
+  background-color: #46B5E5;
+  font-size: 150%;
+  border-radius: 4px;
+  text-align: left;
+}
+.note{
+  font-size: 80%;
+  background-color: #A8E7EE;
+}
+.date{
+  font-size: 80%;
+  background-color: #A8E7EE;
+}
 html {
   line-height: 1.5;
   /* 1 */
@@ -401,7 +419,7 @@ embed,
 object {
   display: block;
   /* 1 */
-  vertical-align: middle;
+  
   /* 2 */
 }
 

@@ -25,7 +25,8 @@ app.get("/notas", async (req, res) => {
   const notas = await getData();
 
   res.render("notas", {
-    tareas: notas,
+    tareas: notas.Items,
+  
   });
 });
 

@@ -8,9 +8,22 @@
     <title>Notas</title>
   </head>
   <body>
+    
+    <div class="list-tasks">
     <ul class="list-disc">
-  
-      <%=tareas%>
+
+    <% for(let i=0; i<tareas.length; i++) { %>
+      <li class="title">
+        Titulo:  <%= JSON.stringify(tareas[i].titulo) %>
+      </li>
+      <li class="note">
+        Nota:  <%= JSON.stringify(tareas[i].notas) %>
+      </li>
+      <li class="date">
+        Fecha: <%= JSON.stringify(tareas[i].fecha) %>
+      </li>
+      <% } %>
     </ul>
+  </div>
   </body>
 </html>
